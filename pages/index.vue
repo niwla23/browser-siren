@@ -1,5 +1,5 @@
 <template>
-  <main class="grid grid-cols-4 gap-4 p-8">
+  <main class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 p-8">
     <button
       v-for="(siren, siren_id) in config.sirens"
       :key="siren_id"

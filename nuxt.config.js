@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'browser-siren',
+    title: 'Siren',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -48,8 +48,18 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icon: {
+      source: 'static/icon.png',
+    },
+    meta: {
+      name: 'Siren',
+      theme_color: '#d82d2d',
+    },
     manifest: {
+      name: 'Siren',
+      short_name: 'Siren',
       lang: 'en',
+      background_color: '#eaff00',
     },
   },
 
