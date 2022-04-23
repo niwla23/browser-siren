@@ -1,0 +1,14 @@
+prefix: "sirens"
+sirens:
+  office:
+    name: "Arbeitszimmer"
+    mqttConnectionString: "ws://192.168.178.33:1885"
+    soundUrl: "sounds/alarm.mp3"
+  alwin_room:
+    name: "Alwins Zimmer"
+    mqttConnectionString: "ws://192.168.178.33:1885"
+    soundUrl: "sounds/alarm.mp3"
+  office_ground_floor:
+    name: "Arbeitszimmer Erdgeschoss"
+    mqttConnectionString: "ws://192.168.178.33:1885"
+    soundUrl: "sounds/alarm.mp3"
