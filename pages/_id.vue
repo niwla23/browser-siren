@@ -149,6 +149,11 @@ const alarmSuffix = 'alarm'
 const availabilitySuffix = 'available'
 
 export default Vue.extend({
+  async asyncData({ $axios }) {
+    const resp: string = await $axios.$get('/config.yaml')
+    const config = yaml.parse(resp)
+    return { config }
+  },
   data: () => {
     return {
       client: null as null | mqtt.MqttClient,
@@ -192,8 +197,6 @@ export default Vue.extend({
     },
   },
   async mounted() {
-    const resp: string = await this.$axios.$get('/config.yaml')
-    this.config = yaml.parse(resp)
     if (!this.sirenConfig) {
       await this.$swal('Not found', 'No siren with that name found', 'error')
       this.$router.push('/')
