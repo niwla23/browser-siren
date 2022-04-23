@@ -23,6 +23,12 @@ jobs:
     - name: Get version
       run: echo "::set-output name=version::$(cat package.json | jq -r .version)"
       id: get_version
+    
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v1
+      
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
 
     - name: Build and push
       uses: docker/build-push-action@v2
