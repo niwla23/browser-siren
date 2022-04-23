@@ -7,7 +7,7 @@ Download the latest release, unpack it and serve it with a web browser of your c
 with the files built in.
 
 ## Configuration
-All config is stored in config.yaml. You can edit it without having to rebuild the project.
+All config is stored in config/config.yaml. You can edit it without having to rebuild the project.
 
 ## Build Setup
 

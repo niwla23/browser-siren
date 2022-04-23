@@ -6,7 +6,8 @@
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate && mkdir packed && tar czf packed/browser-siren_v$(cat package.json | jq -r '.version').tar.gz dist",
+    "generate": "nuxt-ts generate",
+    "generate:pack": "nuxt-ts generate && mkdir packed && tar czf packed/browser-siren_v$(cat package.json | jq -r '.version').tar.gz dist",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "test": "jest"

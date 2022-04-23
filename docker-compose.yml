@@ -3,5 +3,7 @@ services:
   app:
     build: .
     restart: always
+    volumes:
+      - ./docker-config:/usr/share/nginx/html/config
     ports:
-      - 4363:80
+      - 4364:80

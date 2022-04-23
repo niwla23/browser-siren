@@ -18,7 +18,7 @@ import { Config } from '@/types/config'
 
 export default Vue.extend({
   async asyncData({ $axios }) {
-    const resp: string = await $axios.$get('/config.yaml')
+    const resp: string = await $axios.$get('/config/config.yaml')
     const config = yaml.parse(resp)
     return { config }
   },
